@@ -1,13 +1,9 @@
-﻿using AngleSharp.Text;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Windows.Foundation;
 using ZOAHelper.Models;
 using ZOAHelper.Services.Interfaces;
 
@@ -58,7 +54,7 @@ namespace ZOAHelper.Services
                         string iata = fields[4].Trim();
                         string lid = iata;
                         string fir = fields[5].Trim();
-                        bool isPseudo = int.Parse(fields[6].Trim().Substring(0,1)) == 1;
+                        bool isPseudo = int.Parse(fields[6].Trim().Substring(0, 1)) == 1;
 
                         if (!isPseudo)
                         {

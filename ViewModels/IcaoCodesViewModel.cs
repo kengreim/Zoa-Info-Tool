@@ -21,7 +21,7 @@ namespace ZOAHelper.ViewModels
 
         [ObservableProperty]
         private string airportIcaoCodeInput;
-        
+
         [ObservableProperty]
         private string aircraftIcaoCodeInput;
 

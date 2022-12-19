@@ -19,7 +19,7 @@ namespace ZOAHelper.ViewModels
         private Dictionary<string, Airport> AirportDictionary { get; set; }
 
         public ObservableCollection<string> AirportNames { get; private set; }
-        
+
         [ObservableProperty]
         private string dropdownPlaceholderText = "Loading airports...";
 

@@ -1,12 +1,12 @@
-﻿using ZOAHelper.Services;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
+using ZOAHelper.Services;
 
 namespace ZOAHelper.Models
 {
     public class Atis
     {
         public string Airport { get; set; }
-        
+
         [JsonConverter(typeof(AtisTypeEnumConverter))]
         public AtisType Type { get; set; }
 

@@ -13,7 +13,7 @@ namespace ZOAHelper.Models
         HotSpots,
         Unknown
     }
-    
+
     public class Chart
     {
         public string Name { get; set; }

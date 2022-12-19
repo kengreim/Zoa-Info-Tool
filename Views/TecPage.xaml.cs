@@ -8,8 +8,8 @@ using Microsoft.UI.Xaml.Input;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.System;
 using ZOAHelper.Models;
-using ZOAHelper.ViewModels;
 using ZOAHelper.Utils;
+using ZOAHelper.ViewModels;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -28,7 +28,7 @@ namespace ZOAHelper.Views
             DataContext = App.Current.Services.GetRequiredService<AliasRouteViewModel>();
 
             RoutesListView.KeyDown += CopyRoute;
-            
+
             // Add the Enter button handler to both text boxes
             DepAirportTb.KeyDown += KeyHandlers.NewOnEnterCommandHandler(ViewModel.MatchAliasRoutesCommand);
             ArrAirportTb.KeyDown += KeyHandlers.NewOnEnterCommandHandler(ViewModel.MatchAliasRoutesCommand);
@@ -36,7 +36,7 @@ namespace ZOAHelper.Views
             // Set focus on the Departure textbox once the page has fully loaded
             Loaded += (sender, e) => { DepAirportTb.Focus(FocusState.Programmatic); };
         }
-        
+
         private void CopyRoute(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == VirtualKey.C)

@@ -1,5 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Collections;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
@@ -47,7 +46,7 @@ namespace ZOAHelper.ViewModels
                 {
                     Charts.Add(chart);
                 }
-                
+
                 //var groups = Charts.GroupBy(x => x.Type).OrderBy(x => x.Key).ToList();
                 //ChartsGrouped = groups;
             }

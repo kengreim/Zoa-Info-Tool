@@ -17,7 +17,7 @@ namespace ZOAHelper.Views
     public sealed partial class DatisPage : Page
     {
         public DatisViewModel ViewModel => (DatisViewModel)DataContext;
-        
+
         public DatisPage()
         {
             this.InitializeComponent();

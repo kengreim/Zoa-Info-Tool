@@ -1,16 +1,16 @@
 ﻿// Copyright (c) Microsoft Corporation and Contributors.
 // Licensed under the MIT License.
 
-using Microsoft.UI.Xaml;
-using System;
 using Microsoft.Extensions.DependencyInjection;
-using ZOAHelper.Services;
-using ZOAHelper.ViewModels;
-using ZOAHelper.Services.Interfaces;
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
+using Microsoft.UI.Xaml;
+using System;
 using Windows.Graphics;
 using Windows.Storage;
+using ZOAHelper.Services;
+using ZOAHelper.Services.Interfaces;
+using ZOAHelper.ViewModels;
 
 namespace ZOAHelper
 {
@@ -78,7 +78,7 @@ namespace ZOAHelper
             if (LocalSettings.Values.TryGetValue("WindowWidth", out var width) && LocalSettings.Values.TryGetValue("WindowHeight", out var height))
             {
                 size = new SizeInt32((int)width, (int)height);
-            }            
+            }
             MainAppWindowInterop.Resize(size);
 
             // Check if saved settings exist for window position. If so, move window to saved position

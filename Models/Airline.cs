@@ -8,7 +8,7 @@
         public string Country { get; set; }
 
         public Airline() { }
-        
+
         public Airline(string icaoID, string? callsign, string name)
         {
             IcaoId = icaoID;

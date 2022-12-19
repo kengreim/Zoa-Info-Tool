@@ -10,10 +10,10 @@ namespace ZOAHelper.ViewModels
     public partial class RwRouteViewModel : ObservableObject
     {
         public ObservableCollection<RouteSummary> Routes { get; set; }
-        
+
         [ObservableProperty]
         private string departureAirport;
-        
+
         [ObservableProperty]
         private string arrivalAirport;
 

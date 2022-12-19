@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ZOAHelper.Services.Interfaces;
 using ZOAHelper.Models;
+using ZOAHelper.Services.Interfaces;
 
 namespace ZOAHelper.Services
 {
@@ -52,12 +49,12 @@ namespace ZOAHelper.Services
                             else
                             {
                                 returnDict.Add(departureAirport, new List<AliasRoute> { newAliasRoute });
-                            }                            
+                            }
                         }
                     }
                 }
             }
-            
+
             return returnDict;
         }
 

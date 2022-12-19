@@ -24,7 +24,7 @@ namespace ZOAHelper.ViewModels
         public LoaViewModel(ILoaRulesService loaFetcher)
         {
             LoaFetcher = loaFetcher;
-            MatchedLoaRules= new ObservableCollection<LoaRule>();
+            MatchedLoaRules = new ObservableCollection<LoaRule>();
             InitializeAsync();
         }
 
@@ -53,7 +53,7 @@ namespace ZOAHelper.ViewModels
                         MatchedLoaRules.Add(rule);
                     }
                 }
-            }           
+            }
         }
     }
 }

@@ -1,10 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.Net.Http;
-using ZOAHelper.Models;
+﻿using AngleSharp.Dom;
 using AngleSharp.Html.Parser;
-using AngleSharp.Dom;
 using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
+using ZOAHelper.Models;
 using ZOAHelper.Services.Interfaces;
 
 namespace ZOAHelper.Services
@@ -20,7 +19,7 @@ namespace ZOAHelper.Services
         public async Task<List<RouteSummary>> FetchRouteSummariesAsync(string departureIcao, string arrivalIcao)
         {
             List<RouteSummary> returnList = new();
-            
+
             try
             {
                 string responseBody = await _httpClient.GetStringAsync(MakeUrl(departureIcao, arrivalIcao));

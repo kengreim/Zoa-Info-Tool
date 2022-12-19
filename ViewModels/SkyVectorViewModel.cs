@@ -8,7 +8,7 @@ namespace ZOAHelper.ViewModels
     {
         [ObservableProperty]
         private string departureAirport;
-        
+
         [ObservableProperty]
         private string arrivalAirport;
 

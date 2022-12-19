@@ -1,14 +1,10 @@
 ﻿using AngleSharp.Dom;
 using AngleSharp.Html.Parser;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using ZOAHelper.Services.Interfaces;
 using ZOAHelper.Models;
-using System.Diagnostics;
+using ZOAHelper.Services.Interfaces;
 
 namespace ZOAHelper.Services
 {
@@ -20,7 +16,7 @@ namespace ZOAHelper.Services
         {
             _httpClient = httpClient;
         }
-        
+
         public async Task<Dictionary<string, Airline>> FetchAirlineIcaoCodesAsync()
         {
             try

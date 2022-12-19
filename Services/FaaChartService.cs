@@ -28,7 +28,7 @@ namespace ZOAHelper.Services
                 string responseBody = await _httpClient.GetStringAsync(MakeUrl(airportFaaId));
                 var parser = new HtmlParser();
                 IDocument document = await parser.ParseDocumentAsync(responseBody);
-                
+
                 // Root element for all charts
                 var chartsSection = document.GetElementById("charts");
 
@@ -37,7 +37,7 @@ namespace ZOAHelper.Services
                 if (airportDiagramLink != null)
                 {
                     var airportDiagramName = airportDiagramLink.TextContent;
-                    var airportDiagramUrls = new List<Tuple<int, string>> { new Tuple<int, string> (1, airportDiagramLink.GetAttribute("href")) };
+                    var airportDiagramUrls = new List<Tuple<int, string>> { new Tuple<int, string>(1, airportDiagramLink.GetAttribute("href")) };
                     interimDict.Add(airportDiagramName, new Chart(airportDiagramName, ChartType.AirportDiagram, airportDiagramUrls));
                 }
 
@@ -49,7 +49,7 @@ namespace ZOAHelper.Services
                     var typeNode = typeSection.QuerySelector("h3");
                     string typeString = typeNode?.TextContent;
                     ChartType type = ChartTypeFromString(typeString);
-                    
+
                     // Get all the links in the section
                     var links = typeNode?.ParentElement?.QuerySelectorAll("a");
                     if (links != null)
@@ -75,9 +75,9 @@ namespace ZOAHelper.Services
                             }
                         }
                     }
-                    
+
                 }
-                
+
                 // Sort the PDF links before returning. Have to do it in a weird LINQ way to get the right ordering
                 List<Chart> returnList = interimDict.Values.ToList();
                 foreach (var chart in returnList)

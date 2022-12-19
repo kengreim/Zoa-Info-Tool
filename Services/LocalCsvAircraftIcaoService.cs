@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ZOAHelper.Services.Interfaces;
-using ZOAHelper.Models;
-using System.IO;
-using CsvHelper;
-using System.Globalization;
+﻿using CsvHelper;
 using CsvHelper.Configuration;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Threading.Tasks;
+using ZOAHelper.Models;
+using ZOAHelper.Services.Interfaces;
 
 namespace ZOAHelper.Services
 {
@@ -26,7 +23,7 @@ namespace ZOAHelper.Services
                 {
                     csv.Context.RegisterClassMap<AircraftMap>();
                     var records = csv.GetRecords<Aircraft>();
-                    
+
                     foreach (var record in records)
                     {
                         if (!returnDict.TryAdd(record.IcaoId, new List<Aircraft> { record }))

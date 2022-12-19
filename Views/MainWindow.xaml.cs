@@ -50,10 +50,10 @@ namespace ZOAHelper
             mainFrame.Navigate(typeof(StartupPage));
         }
 
-        private void NavBtn_Click (object sender, RoutedEventArgs e)
+        private void NavBtn_Click(object sender, RoutedEventArgs e)
         {
             // Change the current selected button's color back to unselected and reset hover color
-            if (SelectedButton is not null )
+            if (SelectedButton is not null)
             {
                 SelectedButton.Background = UnselectedButtonBrush;
                 SelectedButton.Resources["ButtonBackgroundPointerOver"] = HoverButtonBrush;
