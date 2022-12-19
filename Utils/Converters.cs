@@ -30,14 +30,7 @@ namespace ZOAHelper.Utils
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             int? runway = (int?)value;
-            if (runway is not null)
-            {
-                return runway.ToString();
-            }
-            else
-            {
-                return "Any";
-            }
+            return runway is not null ? runway.ToString() : "Any";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

@@ -11,17 +11,6 @@ namespace ZOAHelper.Utils
 {
     public static class KeyHandlers
     {
-        //public static Action<object, KeyRoutedEventArgs> NewOnEnterCommandHandler (IRelayCommand command)
-        //{
-        //    return new Action<object, KeyRoutedEventArgs>((sender, e) =>
-        //    {
-        //        if (e.Key == VirtualKey.Enter)
-        //        {
-        //            command.Execute(null);
-        //        }
-        //    });
-        //}
-
         public static KeyEventHandler NewOnEnterCommandHandler(IRelayCommand command)
         {
             return new KeyEventHandler((sender, e) =>

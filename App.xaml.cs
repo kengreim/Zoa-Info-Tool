@@ -96,16 +96,6 @@ namespace ZOAHelper
             // Set title and start
             m_window.Title = "ZOA Info";
             m_window.Activate();
-
-            //FaaAirlineIcaoService g = App.Current.Services.GetRequiredService<FaaAirlineIcaoService>();
-            //var g = new FaaAirlineIcaoService(App.Current.Services.GetRequiredService<HttpClient>());
-            //var test = await g.FetchAirlineIcaoCodesAsync();
-            //Debug.WriteLine(test.ToString());
-
-            //var g = new FlightAwareRouteService(App.Current.Services.GetRequiredService<HttpClient>());
-            //var rows2 = await g.FetchRouteSummariesAsync("KOAK", "KLAX");
-            //var f = new FaaChartService(App.Current.Services.GetRequiredService<HttpClient>());
-            //var rows = await f.FetchChartsAsync("KLAX");
         }
 
         private void SaveSize(object sender, WindowSizeChangedEventArgs args)

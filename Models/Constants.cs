@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ZOAHelper.Models
+﻿namespace ZOAHelper.Models
 {
     public class Constants
     {
@@ -21,12 +15,10 @@ namespace ZOAHelper.Models
         public const string FaaContractionsUrl = "https://www.faa.gov/air_traffic/publications/atpubs/cnt_html/chap3_section_3.html";
 
         public const string AircraftCsvFilePath = "/Assets/Data/aircraft.csv";
+
         public const string AirlinesCsvUrl = "https://raw.githubusercontent.com/kengreim/Zoa-Info-Data/main/airlines.csv";
-
         public const string LoaRulesCsvUrl = "https://raw.githubusercontent.com/kengreim/Zoa-Info-Data/main/loa.csv";
-
         public const string AliasTxtUrl = "https://raw.githubusercontent.com/kengreim/Zoa-Info-Data/main/ZOA_Alias.txt";
-
         public const string AircraftCsvUrl = "https://raw.githubusercontent.com/kengreim/Zoa-Info-Data/main/aircraft.csv";
     }
 }
