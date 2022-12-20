@@ -21,6 +21,7 @@
         public const string AliasTxtUrl = "https://raw.githubusercontent.com/kengreim/Zoa-Info-Data/main/ZOA_Alias.txt";
         public const string AircraftCsvUrl = "https://raw.githubusercontent.com/kengreim/Zoa-Info-Data/main/aircraft.csv";
 
-        public const int CacheTtlSeconds = 86400; // 1 day
+        public const int ChartsCacheTtlSeconds = 86400; // 1 day
+        public const int RoutesCacheTtlSeconds = 3600; // 1 hour
     }
 }
