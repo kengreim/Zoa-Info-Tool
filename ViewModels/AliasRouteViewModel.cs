@@ -35,6 +35,11 @@ namespace ZOAHelper.ViewModels
         [RelayCommand]
         private void MatchAliasRoutes()
         {
+            if (DepartureAirport is null || ArrivalAirport is null)
+            {
+                return;
+            }
+            
             MatchedAliasRoutes.Clear();
 
             string departureLookup = departureAirport.Length == 4 ? departureAirport.Substring(1).ToUpper() : departureAirport.ToUpper();

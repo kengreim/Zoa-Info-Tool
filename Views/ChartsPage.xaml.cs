@@ -4,7 +4,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using System.Diagnostics;
 using ZOAHelper.Utils;
 using ZOAHelper.ViewModels;
 
@@ -29,16 +28,6 @@ namespace ZOAHelper.Views
 
             // Set focus on the Airport textbox once the page has fully loaded
             Loaded += (sender, e) => { AirportTb.Focus(FocusState.Programmatic); };
-        }
-
-        public void PdfButton_Click(object sender, RoutedEventArgs e)
-        {
-            var btn = sender as Button;
-            string url = btn.Tag as string;
-            if (!string.IsNullOrEmpty(url))
-            {
-                Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
-            }
         }
     }
 }

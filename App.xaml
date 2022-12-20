@@ -7,7 +7,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ZOAHelper"
     RequestedTheme="Dark">
-
+    
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -26,7 +26,10 @@
                             <SolidColorBrush x:Key="ButtonBackground" Color="RoyalBlue" Opacity="0.2"/>
                             <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="RoyalBlue" Opacity="0.4"/>
                             <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="RoyalBlue" Opacity="0.7"/>
-                            
+
+                            <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="RoyalBlue" Opacity="0.7"/>
+                            <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="RoyalBlue" />
+
                         </ResourceDictionary>
                         <ResourceDictionary x:Key="HighContrast">
                             <!-- Always include a "HighContrast" dictionary when you override

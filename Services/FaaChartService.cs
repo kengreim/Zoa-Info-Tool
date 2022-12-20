@@ -61,9 +61,9 @@ namespace ZOAHelper.Services
                             string linkUrl = link.GetAttribute("href");
                             string chartName = IsContinuedChart(linkName) ? SplitContinuedChartName(linkName).Item1 : linkName;
 
-                            if (interimDict.ContainsKey(chartName))
+                            if (interimDict.TryGetValue(chartName, out Chart value))
                             {
-                                Chart existingChart = interimDict[chartName];
+                                Chart existingChart = value;
                                 int lastInt = existingChart.PdfLinks.Last().Item1;
                                 existingChart?.PdfLinks?.Add(new Tuple<int, string>(lastInt + 1, linkUrl));
                             }
