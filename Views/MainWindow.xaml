@@ -9,27 +9,36 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    
+
     <Grid>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
-        <!--<NavigationView HorizontalAlignment="Center" PaneDisplayMode="Top" IsBackButtonVisible="Collapsed" IsSettingsVisible="False">
-            <NavigationView.MenuItems>
-                <NavigationViewItem Content="1. D-ATIS Lookup" x:Name="A" Background="Red"/>
-                <NavigationViewItem Content="2. FlightAware IFR Analyzer" x:Name="B" />
-                <NavigationViewItem Content="3. SkyVector Route" x:Name="C" />
-                <NavigationViewItem Content="4. TEC Routes" x:Name="D" />
-                <NavigationViewItem Content="5. LOA Routes" x:Name="E" />
-                <NavigationViewItem Content="6. Charts" x:Name="F" />
-                <NavigationViewItem Content="7. ICAO Codes" x:Name="G" />
-            </NavigationView.MenuItems>
-        </NavigationView>-->
 
-        <Grid Grid.Row="0">
+        <Grid x:Name="AppTitleBar">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
+                <ColumnDefinition x:Name="IconColumn" Width="Auto"/>
+                <ColumnDefinition x:Name="TitleColumn" Width="Auto"/>
+                <ColumnDefinition x:Name="LeftDragColumn" Width="*"/>
+                <ColumnDefinition x:Name="SearchColumn" Width="Auto"/>
+                <ColumnDefinition x:Name="RightDragColumn" Width="*"/>
+                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.ColumnSpan="7" Fill="RoyalBlue" Opacity="0.2" />
+            <TextBlock x:Name="TitleTextBlock" 
+               Text="ZOA Info" 
+               FontFamily="Cascadia Code"
+               Grid.Column="2"
+               VerticalAlignment="Center"
+               Margin="10,0,0,0"/>
+            <Border BorderBrush="RoyalBlue" Opacity="0.4" BorderThickness="0,0,0,1" Grid.ColumnSpan="7" />
+        </Grid>
+
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
@@ -47,20 +56,9 @@
             <Button Style="{StaticResource NavButtonStyle}" Grid.Column="4" Content="5. TEC" x:Name="tecBtn" Click="NavBtn_Click" />
             <Button Style="{StaticResource NavButtonStyle}" Grid.Column="5" Content="6. Charts" x:Name="chartsBtn" Click="NavBtn_Click" />
             <Button Style="{StaticResource NavButtonStyle}" Grid.Column="6" Content="7. ICAO Codes" x:Name="codesBtn" Click="NavBtn_Click" />
-            
-            
-            <!--<Border Grid.Column="0" BorderThickness="0, 0, 0, 3" Grid.ColumnSpan="7" BorderBrush="White" />-->
-            <!--<Border Grid.Column="0" BorderThickness="0, 0, 1, 0" BorderBrush="White" />
-            
-            <Border Grid.Column="1" BorderThickness="0, 0, 1, 0" BorderBrush="White" />
-            <Border Grid.Column="2" BorderThickness="0, 0, 1, 0" BorderBrush="White" />
-            <Border Grid.Column="3" BorderThickness="0, 0, 1, 0" BorderBrush="White" />
-            <Border Grid.Column="4" BorderThickness="0, 0, 1, 0" BorderBrush="White" />
-            <Border Grid.Column="5" BorderThickness="0, 0, 1, 0" BorderBrush="White" />
-            <Border Grid.Column="6" BorderThickness="0, 0, 1, 0" BorderBrush="White" />-->
         </Grid>
 
-        <Frame Grid.Row="1" x:Name="mainFrame">
+        <Frame Grid.Row="2" x:Name="mainFrame">
         </Frame>
 
     </Grid>

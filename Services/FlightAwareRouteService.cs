@@ -19,6 +19,8 @@ namespace ZOAHelper.Services
         public FlightAwareRouteService(HttpClient httpClient)
         {
             _httpClient = httpClient;
+
+            // Create cache with default TTL of 1 hour
             _routesCache = new MemoryCache(new MemoryCacheOptions());
             _cacheEntryOptions = new MemoryCacheEntryOptions()
             {

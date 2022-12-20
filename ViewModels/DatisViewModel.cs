@@ -102,7 +102,7 @@ namespace ZOAHelper.ViewModels
                     Dispatcher.TryEnqueue(() => { UpdateVisibleAtis(); });
 
                     // Wait to loop with some delay (default 60 seconds)
-                    await Task.Delay(Constants.AtisUpdateDelay);
+                    await Task.Delay(Constants.AtisUpdateDelayMilliseconds);
                 }
             });
         }
@@ -122,7 +122,6 @@ namespace ZOAHelper.ViewModels
 
             // Find the ATISes for the selected airport
             List<Atis> atisList = AirportDictionary[SelectedAirport].AtisList;
-
 
             if (atisList.Count == 1)
             {

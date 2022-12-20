@@ -40,9 +40,10 @@
                     </ResourceDictionary.ThemeDictionaries>
                     <Style x:Key="NavButtonStyle" TargetType="Button">
                         <Setter Property="HorizontalAlignment" Value="Stretch" />
+                        <Setter Property="VerticalContentAlignment" Value="Bottom" />
                         <Setter Property="BorderThickness" Value="0" />
                         <Setter Property="VerticalAlignment" Value="Stretch" />
-                        <Setter Property="Padding" Value="5,20,5,20" />
+                        <Setter Property="Padding" Value="5,15,5,15" />
                         <Setter Property="FontWeight" Value="Bold" />
                         <!--<Setter Property="FontFamily" Value="Cascadia Code" />-->
                     </Style>

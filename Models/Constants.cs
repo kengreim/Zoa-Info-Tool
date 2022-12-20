@@ -8,7 +8,7 @@
 
         public const string AtisApiBaseUrl = "https://datis.clowd.io/api/";
         public const string AtisAllAirports = "all";
-        public const int AtisUpdateDelay = 60000; // 1 minute
+        public const int AtisUpdateDelayMilliseconds = 60000; // 1 minute
 
         public const string SkyVectorBaseUrl = "https://skyvector.com/?fpl=";
 
