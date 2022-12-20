@@ -20,5 +20,7 @@
         public const string LoaRulesCsvUrl = "https://raw.githubusercontent.com/kengreim/Zoa-Info-Data/main/loa.csv";
         public const string AliasTxtUrl = "https://raw.githubusercontent.com/kengreim/Zoa-Info-Data/main/ZOA_Alias.txt";
         public const string AircraftCsvUrl = "https://raw.githubusercontent.com/kengreim/Zoa-Info-Data/main/aircraft.csv";
+
+        public const int CacheTtlSeconds = 86400; // 1 day
     }
 }

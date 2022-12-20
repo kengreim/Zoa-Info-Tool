@@ -27,7 +27,7 @@
                             <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="RoyalBlue" Opacity="0.4"/>
                             <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="RoyalBlue" Opacity="0.7"/>
 
-                            <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="RoyalBlue" Opacity="0.7"/>
+                            <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="RoyalBlue" Opacity="0.2"/>
                             <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="RoyalBlue" />
 
                         </ResourceDictionary>
