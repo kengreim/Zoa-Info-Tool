@@ -1,8 +1,10 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.Collections;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using ZOAHelper.Models;
 using ZOAHelper.Services.Interfaces;
 
@@ -13,26 +15,14 @@ namespace ZOAHelper.ViewModels
         [ObservableProperty]
         private string airport;
 
-        public ObservableCollection<Chart> Charts;
-
-        //[ObservableProperty]
-        //private ObservableGroupedCollection<ChartType, Chart> chartsGrouped;
-
-        //[ObservableProperty]
-        //private CollectionViewSource chartsGroupedCVS;
+        public ObservableGroupedCollection<ChartType, Chart> ChartsGrouped { get; private set; }
 
         private IChartService ChartFetcher { get; set; }
 
         public ChartViewModel(IChartService chartFetcher)
         {
             ChartFetcher = chartFetcher;
-            Charts = new ObservableCollection<Chart>();
-            //ChartsGrouped = new ObservableGroupedCollection<ChartType, Chart>();
-            //ChartsGroupedCVS = new CollectionViewSource
-            //{
-            //    IsSourceGrouped = true,
-            //    Source = ChartsGrouped,
-            //};
+            ChartsGrouped = new ObservableGroupedCollection<ChartType, Chart>();
         }
 
         [RelayCommand]
@@ -41,14 +31,11 @@ namespace ZOAHelper.ViewModels
             try
             {
                 List<Chart> newCharts = await ChartFetcher.FetchChartsAsync(Airport);
-                Charts.Clear();
-                foreach (var chart in newCharts)
-                {
-                    Charts.Add(chart);
-                }
 
-                //var groups = Charts.GroupBy(x => x.Type).OrderBy(x => x.Key).ToList();
-                //ChartsGrouped = groups;
+                // Group the new charts by Chart Type
+                var grouped = newCharts.GroupBy( static x => x.Type).OrderBy( static g => g.Key);
+                ChartsGrouped = new ObservableGroupedCollection<ChartType, Chart>(grouped);
+                OnPropertyChanged(nameof(ChartsGrouped));
             }
             catch (Exception)
             {

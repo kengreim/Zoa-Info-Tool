@@ -1,6 +1,7 @@
 ﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Data;
 using System;
+using ZOAHelper.Models;
 
 namespace ZOAHelper.Utils
 {
@@ -25,6 +26,30 @@ namespace ZOAHelper.Utils
             return runway is not null ? runway.ToString() : "Any";
         }
 
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class ChartTypetoStringConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            return (ChartType)value switch
+            {
+                ChartType.AirportDiagram => "Airport Diagram",
+                ChartType.AirportMinimums => "Minimums",
+                ChartType.HotSpots => "Hot Spots",
+                ChartType.STAR => "STAR",
+                ChartType.DP => "SID",
+                ChartType.IAP => "Approaches",
+                ChartType.Unknown => "Unknown",
+                _ => "Unknown"
+            };
+        }
+
+        // ConvertBack is not implemented for a OneWay binding.
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
             throw new NotImplementedException();
