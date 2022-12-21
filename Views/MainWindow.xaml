@@ -49,13 +49,48 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="0" Content="1. D-ATIS" x:Name="datisBtn" Click="NavBtn_Click" />
-            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="1" Content="2. RW Routes" x:Name="rwRoutesBtn" Click="NavBtn_Click" />
-            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="2" Content="3. SkyVector" x:Name="skyVectorBtn" Click="NavBtn_Click" />
-            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="3" Content="4. LOA" x:Name="loaBtn" Click="NavBtn_Click" />
-            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="4" Content="5. TEC" x:Name="tecBtn" Click="NavBtn_Click" />
-            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="5" Content="6. Charts" x:Name="chartsBtn" Click="NavBtn_Click" />
-            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="6" Content="7. ICAO Codes" x:Name="codesBtn" Click="NavBtn_Click" />
+            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="0" Content="1. D-ATIS" x:Name="datisBtn" Click="NavBtn_Click">
+                <Button.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Number1" Modifiers="Control,Menu" />
+                    <KeyboardAccelerator Key="NumberPad1" Modifiers="Control,Menu" />
+                </Button.KeyboardAccelerators>
+            </Button>
+            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="1" Content="2. RW Routes" x:Name="rwRoutesBtn" Click="NavBtn_Click">
+                <Button.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Number2" Modifiers="Control,Menu" />
+                    <KeyboardAccelerator Key="NumberPad2" Modifiers="Control,Menu" />
+                </Button.KeyboardAccelerators>
+            </Button>
+            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="2" Content="3. SkyVector" x:Name="skyVectorBtn" Click="NavBtn_Click">
+                <Button.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Number3" Modifiers="Control,Menu" />
+                    <KeyboardAccelerator Key="NumberPad3" Modifiers="Control,Menu" />
+                </Button.KeyboardAccelerators>
+            </Button>
+            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="3" Content="4. LOA" x:Name="loaBtn" Click="NavBtn_Click">
+                <Button.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Number4" Modifiers="Control,Menu" />
+                    <KeyboardAccelerator Key="NumberPad4" Modifiers="Control,Menu" />
+                </Button.KeyboardAccelerators>
+            </Button>
+            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="4" Content="5. TEC" x:Name="tecBtn" Click="NavBtn_Click">
+                <Button.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Number5" Modifiers="Control,Menu" />
+                    <KeyboardAccelerator Key="NumberPad5" Modifiers="Control,Menu" />
+                </Button.KeyboardAccelerators>
+            </Button>
+            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="5" Content="6. Charts" x:Name="chartsBtn" Click="NavBtn_Click">
+                <Button.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Number6" Modifiers="Control,Menu" />
+                    <KeyboardAccelerator Key="NumberPad6" Modifiers="Control,Menu" />
+                </Button.KeyboardAccelerators>
+            </Button>
+            <Button Style="{StaticResource NavButtonStyle}" Grid.Column="6" Content="7. ICAO Codes" x:Name="codesBtn" Click="NavBtn_Click">
+                <Button.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Number7" Modifiers="Control,Menu" />
+                    <KeyboardAccelerator Key="NumberPad7" Modifiers="Control,Menu" />
+                </Button.KeyboardAccelerators>
+            </Button>
         </Grid>
 
         <Frame Grid.Row="2" x:Name="mainFrame">

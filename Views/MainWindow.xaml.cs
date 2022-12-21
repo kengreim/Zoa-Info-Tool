@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using WinRT.Interop;
 using ZOAHelper.Views;
-using System.Drawing;
+using Microsoft.UI.Xaml.Input;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -52,8 +52,8 @@ namespace ZOAHelper
                 AppTitleBar.Loaded += AppTitleBar_Loaded;
                 AppTitleBar.SizeChanged += AppTitleBar_SizeChanged;
 
-                titleBar.ButtonBackgroundColor = titleBar.ButtonHoverBackgroundColor = Colors.Transparent;
-                titleBar.ButtonForegroundColor = Colors.RoyalBlue;
+                titleBar.ButtonBackgroundColor = titleBar.ButtonHoverBackgroundColor = titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+                titleBar.ButtonForegroundColor = titleBar.ButtonInactiveForegroundColor = Colors.RoyalBlue;
                 titleBar.ButtonHoverForegroundColor = Colors.White;
                 //titleBar.ButtonHoverBackgroundColor = new Windows.UI.Color
                 //{

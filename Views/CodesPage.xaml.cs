@@ -2,7 +2,9 @@
 // Licensed under the MIT License.
 
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Navigation;
 using ZOAHelper.Utils;
 using ZOAHelper.ViewModels;
 
@@ -25,6 +27,10 @@ namespace ZOAHelper.Views
             AircraftTb.KeyDown += KeyHandlers.NewOnEnterCommandHandler(ViewModel.LookupAircraftCommand);
             AirlineTb.KeyDown += KeyHandlers.NewOnEnterCommandHandler(ViewModel.LookupAirlineCommand);
             AirportTb.KeyDown += KeyHandlers.NewOnEnterCommandHandler(ViewModel.LookupAirportCommand);
+
+            // Set focus on the Airline textbox once the page has fully loaded
+            AirlineTb.IsEnabledChanged += (sender, e) => { AirlineTb.Focus(FocusState.Programmatic); };
+            Loaded += (sender, e) => { AirlineTb.Focus(FocusState.Programmatic); };
         }
-    }
+    }   
 }

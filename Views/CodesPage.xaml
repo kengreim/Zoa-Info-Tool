@@ -40,7 +40,7 @@
                 <StackPanel Orientation="Vertical" Margin="0,0,30,0">
                     <TextBlock Text="Airline" Margin="0,0,0,8"/>
                     <StackPanel Orientation="Horizontal" Grid.Row="0">
-                        <TextBox x:Name="AirlineTb" PlaceholderText="3 chars" VerticalAlignment="Top" HorizontalAlignment="Left" Text="{x:Bind ViewModel.AirlineIcaoCodeInput, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox x:Name="AirlineTb" PlaceholderText="3 chars" VerticalAlignment="Top" HorizontalAlignment="Left" Text="{x:Bind ViewModel.AirlineIcaoCodeInput, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{x:Bind ViewModel.DataIsReady, Mode=OneWay}"/>
                         <Button x:Name="GoAirlineBtn" Content="Go" VerticalAlignment="Center" Command="{x:Bind ViewModel.LookupAirlineCommand}" Margin="10,0,0,0" />
                     </StackPanel>
                 </StackPanel>

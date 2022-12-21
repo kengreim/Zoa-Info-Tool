@@ -30,6 +30,12 @@
                             <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="RoyalBlue" Opacity="0.2"/>
                             <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="RoyalBlue" />
 
+                            <!--<SolidColorBrush x:Key="AppBarButtonBackground" Color="RoyalBlue" Opacity="0.2"/>
+                            <SolidColorBrush x:Key="AppBarButtonBackgroundPointerOver" Color="RoyalBlue" Opacity="0.4"/>
+                            <SolidColorBrush x:Key="AppBarButtonBackgroundPressed" Color="RoyalBlue" Opacity="0.7"/>
+
+                            <SolidColorBrush x:Key="CommandBarBackground" Color="RoyalBlue" Opacity="0.2"/>-->
+
                         </ResourceDictionary>
                         <ResourceDictionary x:Key="HighContrast">
                             <!-- Always include a "HighContrast" dictionary when you override
