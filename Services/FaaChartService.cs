@@ -8,10 +8,10 @@ using System.Linq;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ZOAHelper.Models;
-using ZOAHelper.Services.Interfaces;
+using ZoaInfoTool.Models;
+using ZoaInfoTool.Services.Interfaces;
 
-namespace ZOAHelper.Services
+namespace ZoaInfoTool.Services
 {
     class FaaChartService : IChartService
     {

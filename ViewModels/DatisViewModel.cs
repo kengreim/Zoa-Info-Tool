@@ -7,10 +7,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ZOAHelper.Models;
-using ZOAHelper.Services.Interfaces;
+using ZoaInfoTool.Models;
+using ZoaInfoTool.Services.Interfaces;
 
-namespace ZOAHelper.ViewModels
+namespace ZoaInfoTool.ViewModels
 {
     public partial class DatisViewModel : ObservableObject
     {

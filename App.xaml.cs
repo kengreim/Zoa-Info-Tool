@@ -8,11 +8,11 @@ using Microsoft.UI.Xaml;
 using System;
 using Windows.Graphics;
 using Windows.Storage;
-using ZOAHelper.Services;
-using ZOAHelper.Services.Interfaces;
-using ZOAHelper.ViewModels;
+using ZoaInfoTool.Services;
+using ZoaInfoTool.Services.Interfaces;
+using ZoaInfoTool.ViewModels;
 
-namespace ZOAHelper
+namespace ZoaInfoTool
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.

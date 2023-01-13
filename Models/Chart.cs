@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ZOAHelper.Models
+namespace ZoaInfoTool.Models
 {
     public enum ChartType
     {

@@ -5,10 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using ZOAHelper.Models;
-using ZOAHelper.Services.Interfaces;
+using ZoaInfoTool.Models;
+using ZoaInfoTool.Services.Interfaces;
 
-namespace ZOAHelper.Services
+namespace ZoaInfoTool.Services
 {
     public class FlightAwareRouteService : IRouteSummaryService
     {

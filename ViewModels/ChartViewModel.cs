@@ -4,11 +4,11 @@ using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using ZOAHelper.Models;
-using ZOAHelper.Services.Interfaces;
+using ZoaInfoTool.Models;
+using ZoaInfoTool.Services.Interfaces;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace ZOAHelper.ViewModels
+namespace ZoaInfoTool.ViewModels
 {
     public partial class ChartViewModel : ObservableObject
     {       

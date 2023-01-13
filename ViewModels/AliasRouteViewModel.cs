@@ -2,10 +2,10 @@
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using ZOAHelper.Models;
-using ZOAHelper.Services.Interfaces;
+using ZoaInfoTool.Models;
+using ZoaInfoTool.Services.Interfaces;
 
-namespace ZOAHelper.ViewModels
+namespace ZoaInfoTool.ViewModels
 {
     public partial class AliasRouteViewModel : ObservableObject
     {

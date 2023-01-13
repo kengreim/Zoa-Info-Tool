@@ -1,9 +1,9 @@
 ﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Data;
 using System;
-using ZOAHelper.Models;
+using ZoaInfoTool.Models;
 
-namespace ZOAHelper.Utils
+namespace ZoaInfoTool.Utils
 {
     public static class Converters
     {

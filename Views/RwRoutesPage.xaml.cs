@@ -7,12 +7,12 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.System;
-using ZOAHelper.Models;
-using ZOAHelper.Utils;
-using ZOAHelper.ViewModels;
+using ZoaInfoTool.Models;
+using ZoaInfoTool.Utils;
+using ZoaInfoTool.ViewModels;
 
 
-namespace ZOAHelper.Views
+namespace ZoaInfoTool.Views
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.

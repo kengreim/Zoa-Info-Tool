@@ -5,10 +5,10 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using ZOAHelper.Models;
-using ZOAHelper.Services.Interfaces;
+using ZoaInfoTool.Models;
+using ZoaInfoTool.Services.Interfaces;
 
-namespace ZOAHelper.Services
+namespace ZoaInfoTool.Services
 {
     public class ClowdDatisFetchService : IAtisService
     {

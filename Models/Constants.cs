@@ -1,4 +1,4 @@
-﻿namespace ZOAHelper.Models
+﻿namespace ZoaInfoTool.Models
 {
     public class Constants
     {

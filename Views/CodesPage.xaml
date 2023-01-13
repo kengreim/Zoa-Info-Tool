@@ -2,11 +2,11 @@
 <!-- Licensed under the MIT License. -->
 
 <Page
-    x:Class="ZOAHelper.Views.CodesPage"
+    x:Class="ZoaInfoTool.Views.CodesPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:ZOAHelper.Views"
-    xmlns:utils="using:ZOAHelper.Utils"
+    xmlns:local="using:ZoaInfoTool.Views"
+    xmlns:utils="using:ZoaInfoTool.Utils"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
